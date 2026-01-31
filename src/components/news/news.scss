@@ -1,0 +1,309 @@
+// news.scss
+.news {
+  padding: 80px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  
+  &-header {
+    text-align: center;
+    margin-bottom: 50px;
+    
+    h1 {
+      font-size: 2.8rem;
+      color: #333;
+      margin-bottom: 15px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #5d4d92 0%, #8a74d3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .news-subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+    
+    .news-stats {
+      margin-top: 20px;
+      
+      .news-count {
+        display: inline-block;
+        background-color: #f0e6ff;
+        color: #5d4d92;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media (max-width: 1199px) and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  
+  .news-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    
+    &:hover .news-title {
+      color: #5d4d92;
+    }
+  }
+  
+  &-item {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    &.hovered {
+      transform: translateY(-5px);
+    }
+  }
+  
+  &-image-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .news-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7));
+      
+      .news-date {
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        color: white;
+        font-size: 0.85rem;
+        opacity: 0.9;
+      }
+    }
+    
+    &:hover img {
+      transform: scale(1.08);
+    }
+  }
+  
+  &-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    
+    .news-category {
+      display: inline-block;
+      background-color: #f0e6ff;
+      color: #5d4d92;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      align-self: flex-start;
+    }
+    
+    .news-title {
+      font-size: 1.3rem;
+      color: #333;
+      margin-bottom: 12px;
+      line-height: 1.4;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      flex-grow: 1;
+    }
+    
+    .news-excerpt {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      flex-grow: 1;
+    }
+    
+    .news-meta {
+      margin-top: auto;
+      
+      .news-cta {
+        color: #5d4d92;
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        
+        .cta-arrow {
+          transition: transform 0.3s ease;
+        }
+        
+        &:hover .cta-arrow {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+  
+  &-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #f0e6ff;
+    
+    .news-total {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    .news-see-all-btn {
+      display: inline-block;
+      background-color: #5d4d92;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: #4a3f75;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(93, 77, 146, 0.3);
+      }
+    }
+  }
+  
+  // Loading styles
+  &-loading {
+    text-align: center;
+    padding: 100px 20px;
+    
+    .loading-spinner {
+      border: 4px solid rgba(93, 77, 146, 0.1);
+      border-top: 4px solid #5d4d92;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+    
+    p {
+      color: #5d4d92;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+  
+  // Error styles
+  &-error {
+    text-align: center;
+    padding: 100px 20px;
+    
+    p {
+      color: #ef4444;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    
+    button {
+      background-color: #5d4d92;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      
+      &:hover {
+        background-color: #4a3f75;
+      }
+    }
+  }
+  
+  .no-news {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    margin-top: 30px;
+    
+    p {
+      color: #666;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .admin-link {
+      &:hover {
+        background-color: #4a3f75;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Til o'zgarishiga animatsiya
+.news-item {
+  .news-title, .news-excerpt {
+    transition: opacity 0.3s ease;
+  }
+  
+  &.language-changing {
+    .news-title, .news-excerpt {
+      opacity: 0.7;
+    }
+  }
+}
