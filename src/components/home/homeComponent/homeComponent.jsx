@@ -90,7 +90,7 @@ const HomeComponent = () => {
                                 <div className='testimonial-author'>
                                     <div className='author-avatar'>A</div>
                                     <div className='author-info'>
-                                        <div className='author-name'>{translations.testimonialName || "Aziza Qobilova"}</div>
+                                        <div className='author-name'>{translations.testimonialName || "Насиба Кадировна"}</div>
                                         <div className='author-role'>{translations.testimonialRole || "Tadbirkor"}</div>
                                     </div>
                                 </div>

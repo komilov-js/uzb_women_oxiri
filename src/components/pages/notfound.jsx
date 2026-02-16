@@ -4,7 +4,7 @@ import './NotFound.scss'; // global SCSS fayl
 
 const NotFound = () => {
   return (
-    <div className="container">
+    <div className="containeraa">
       <div className="content">
         <div className="illustration">
           <span role="img" aria-label="Gul">🌸</span>
