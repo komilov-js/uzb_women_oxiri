@@ -42,7 +42,7 @@ const VideoLavhalar = () => {
         src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=1`}
         title={title}
         frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
     );
@@ -84,8 +84,8 @@ const VideoLavhalar = () => {
           youtube_url: video.youtube_url,
           hasFullIframe: hasFullIframe,
           thumbnail: thumbnail,
-          views_count: video.views_count || video.views || 0,
-          likes_count: video.likes_count || video.likes || 0,
+          // views_count: video.views_count || video.views || 0,
+          // likes_count: video.likes_count || video.likes || 0,
           duration: video.duration || "00:00",
           created_at: video.created_at
         };
@@ -395,14 +395,14 @@ const VideoLavhalar = () => {
                 </div>
                 <div className="video-item-content">
                   <h3>{video.title}</h3>
-                  <div className="video-item-meta">
+                  {/* <div className="video-item-meta">
                     <span className="views">
                       👁️ {video.views_count} {t.views}
                     </span>
                     <span className="likes">
                       ❤️ {video.likes_count} {t.likes}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </li>
             ))}
@@ -444,7 +444,7 @@ const VideoLavhalar = () => {
                 <h2>{selectedVideo.title}</h2>
 
                 <div className="video-stats">
-                  <span className="video-stat">
+                  {/* <span className="video-stat">
                     <svg
                       width="20"
                       height="20"
@@ -457,8 +457,8 @@ const VideoLavhalar = () => {
                       <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" />
                     </svg>
                     {selectedVideo.views_count} {t.views}
-                  </span>
-
+                  </span> */}
+{/* 
                   <span className="video-stat">
                     <button
                       className="like-btn"
@@ -476,10 +476,10 @@ const VideoLavhalar = () => {
                         strokeWidth="2"
                       >
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                      </svg>
-                      {selectedVideo.likes_count} {t.likes}
-                    </button>
-                  </span>
+                      </svg> */}
+                      {/* {selectedVideo.likes_count} {t.likes} */}
+                    {/* </button>
+                  </span> */}
 
                   <span className="video-stat">
                     <svg

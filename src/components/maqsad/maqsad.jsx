@@ -7,6 +7,7 @@ import Img4 from '../../imgs/img_4.jpg'
 import Img5 from '../../imgs/img_5.jpg'
 import Img6 from '../../imgs/img_6.jpg'
 import { useLanguage } from '../../context/LanguageContext'
+import Aa from '../../imgs/aa.webp'
 
 const Maqsad = () => {
     const { translations, language } = useLanguage()
@@ -36,7 +37,7 @@ const Maqsad = () => {
                     },
                     {
                         id: 4,
-                        img: 'https://uzbwomen.uz/wp-content/uploads/2025/01/IMG_20250116_100054_750.jpg',
+                        img: Aa,
                         title: 'Повышение юридической и медицинской грамотности',
                         description: 'Ассоциация организует различные семинары, тренинги и учебные программы по повышению юридической и медицинской грамотности. Женщины и девушки имеют возможность повысить свои знания в вопросах своих прав, основных аспектах охраны здоровья, в частности, репродуктивного здоровья, психологической помощи.'
                     },
@@ -75,7 +76,7 @@ const Maqsad = () => {
                     },
                     {
                         id: 4,
-                        img: 'https://uzbwomen.uz/wp-content/uploads/2025/01/IMG_20250116_100054_750.jpg',
+                        img: Aa,
                         title: 'Improving Legal and Medical Literacy',
                         description: 'The association organizes various seminars, trainings, and educational programs to improve legal and medical literacy. Women and girls have the opportunity to enhance their knowledge on their rights, basic aspects of healthcare, particularly reproductive health, and psychological assistance.'
                     },
@@ -114,7 +115,7 @@ const Maqsad = () => {
                     },
                     {
                         id: 4,
-                        img: 'https://uzbwomen.uz/wp-content/uploads/2025/01/IMG_20250116_100054_750.jpg',
+                        img: Aa,
                         title: 'Huquqiy va tibbiy savodxonlikni oshirish',
                         description: 'Uyushma huquqiy va tibbiy savodxonlikni oshirish bo‘yicha turli seminarlar, treninglar va o‘quv dasturlarini tashkil qiladi. Ayollar va qizlar o‘z huquqlari, sog‘liqni saqlashning asosiy jihatlari, xususan, reproduktiv salomatlik, psixologik yordam kabi masalalarda bilimlarini oshirish imkoniyatiga ega bo‘lishadi.'
                     },

@@ -6,6 +6,8 @@ import NewsDetail from './components/newsDetail/newsDetail'
 import Footer from './components/footer/footer'
 import { LanguageProvider } from './context/LanguageContext'
 import News from './components/news/news'
+import NotFound from './components/pages/notfound'
+
 const App = () => {
   return (
     <>
@@ -15,6 +17,8 @@ const App = () => {
         <Route path="/news/:id" element={<NewsDetail />} />
         {/* <Route path="/all-news" element={<AllNewsPage />} /> */}
         <Route path="/news" element={<News />} />
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
       <Footer />
     </>

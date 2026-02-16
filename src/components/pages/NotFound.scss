@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #fff9f9 0%, #ffe4ec 100%);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.content {
+  text-align: center;
+  max-width: 500px;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 6px 12px rgba(255, 105, 180, 0.1);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+.illustration {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+
+  span {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  span:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #d44e8c, #b33b6e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  text-shadow: 0 4px 12px rgba(210, 70, 140, 0.2);
+}
+
+.message {
+  font-size: 1.25rem;
+  color: #5a3e4a;
+  margin: 1.5rem 0 2rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.homeLink {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(105deg, #ff8aae, #f75d9e);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(255, 120, 160, 0.4);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(255, 90, 140, 0.5);
+    background: linear-gradient(105deg, #ff7aa3, #f34a8c);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(255, 120, 160, 0.4);
+  }
+}
+
+/* Float animatsiyasi */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Mobil moslashuvi */
+@media (max-width: 480px) {
+  .title {
+    font-size: 4.5rem;
+  }
+  .message {
+    font-size: 1rem;
+  }
+  .illustration {
+    font-size: 3rem;
+  }
+  .content {
+    padding: 2rem 1.5rem;
+  }
+}

@@ -46,7 +46,7 @@ nav {
         
 
         // Mobile menu styles
-        @media (max-width: 768px) {
+        @media (max-width: 1150px) {
             position: fixed;
             top: 15vh;
             left: 0;
@@ -63,7 +63,7 @@ nav {
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
             &.active {
-                height: calc(50vh - 15vh);
+                height: 90VH;
                 padding-top: 30px;
             }
 
@@ -110,7 +110,7 @@ nav {
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1150px) {
             display: none;
         }
     }
@@ -119,7 +119,7 @@ nav {
     .mobile-menu-btn {
         display: none;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1150px) {
             display: block;
             cursor: pointer;
             z-index: 1001;
@@ -394,7 +394,7 @@ body.menu-open {
                         color: white;
                         
                         img {
-                            filter: brightness(0) invert(1);
+                            // filter: brightness(0) invert(1);
                         }
                         
                         &::after {
